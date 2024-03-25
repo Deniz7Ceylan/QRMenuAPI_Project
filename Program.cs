@@ -23,9 +23,10 @@ namespace QRMenuAPI
             builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
                     .AddEntityFrameworkStores<ApplicationDbContext>().AddDefaultTokenProviders();
             builder.Services.AddAuthentication();
-            builder.Services.AddAuthorization(options =>
-          options.AddPolicy("CompanyAdmin",
-          policy => policy.RequireClaim("CompanyId")));
+            builder.Services.AddAuthorization(//options =>
+          //options.AddPolicy("CompanyAdmin",
+          //policy => policy.RequireClaim("CompanyId"))
+          );
 
             var app = builder.Build();
 
@@ -38,6 +39,7 @@ namespace QRMenuAPI
 
             app.UseHttpsRedirection();
 
+            app.UseAuthentication();
             app.UseAuthorization();
 
 

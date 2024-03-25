@@ -1,32 +1,26 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\deniz\\source\\repos\\QRMenuAPI\\QRMenuAPI\\QRMenuAPI.csproj": {}
+    "/Users/derslik1-1/Projects/QRMenuAPI/QRMenuAPI/QRMenuAPI_Project/QRMenuAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\deniz\\source\\repos\\QRMenuAPI\\QRMenuAPI\\QRMenuAPI.csproj": {
+    "/Users/derslik1-1/Projects/QRMenuAPI/QRMenuAPI/QRMenuAPI_Project/QRMenuAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\deniz\\source\\repos\\QRMenuAPI\\QRMenuAPI\\QRMenuAPI.csproj",
+        "projectUniqueName": "/Users/derslik1-1/Projects/QRMenuAPI/QRMenuAPI/QRMenuAPI_Project/QRMenuAPI.csproj",
         "projectName": "QRMenuAPI",
-        "projectPath": "C:\\Users\\deniz\\source\\repos\\QRMenuAPI\\QRMenuAPI\\QRMenuAPI.csproj",
-        "packagesPath": "C:\\Users\\deniz\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\deniz\\source\\repos\\QRMenuAPI\\QRMenuAPI\\obj\\",
+        "projectPath": "/Users/derslik1-1/Projects/QRMenuAPI/QRMenuAPI/QRMenuAPI_Project/QRMenuAPI.csproj",
+        "packagesPath": "/Users/derslik1-1/.nuget/packages/",
+        "outputPath": "/Users/derslik1-1/Projects/QRMenuAPI/QRMenuAPI/QRMenuAPI_Project/obj/",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\deniz\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/derslik1-1/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
+          "/usr/local/share/dotnet/sdk/7.0.314/Sdks/Microsoft.NET.Sdk.Web/library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -53,6 +47,10 @@
               "target": "Package",
               "version": "[6.0.28, )"
             },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[6.0.28, )"
+            },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
@@ -62,6 +60,10 @@
             "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
               "target": "Package",
               "version": "[1.19.5, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[6.0.16, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
@@ -87,7 +89,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.314/RuntimeIdentifierGraph.json"
         }
       }
     }

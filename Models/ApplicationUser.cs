@@ -10,10 +10,10 @@ public class ApplicationUser : IdentityUser
     [Column(TypeName = "nvarchar(100)")]
     public override string UserName { get => base.UserName; set => base.UserName = value; }
 
-    [Required]
+    /*[Required]
     [StringLength(100)]
     [DataType(DataType.Password)]
-    public string Password { get; set; } = "";
+    public string Password { get; set; } = "";*/
 
     [StringLength(100, MinimumLength = 2)]
     [Column(TypeName = "nvarchar(100)")]

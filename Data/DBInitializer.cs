@@ -19,9 +19,9 @@ public class DBInitializer
         if (!context.States.Any())
         {
             context.States.AddRange(
+                new State { Id = 0, Name = "Deleted" },
                 new State { Id = 1, Name = "Active" },
-                new State { Id = 2, Name = "Passive" },
-                new State { Id = 3, Name = "Deleted" }
+                new State { Id = 2, Name = "Passive" }
             );
             context.SaveChanges();
         }
@@ -62,7 +62,7 @@ public class DBInitializer
             var tabGidaUser = new ApplicationUser
             {
                 UserName = "TabAdmin",
-                Password = "Tabgida.123",
+                //Password = "Tabgida.123",
                 Name = "TAB",
                 SurName = "Gıda",
                 Email = "tabgidaadmin@tabgida.com.tr",
@@ -71,7 +71,7 @@ public class DBInitializer
                 CompanyId = tabGidaCompany.Id,
                 StateId = 1,
             };
-            userManager.CreateAsync(tabGidaUser, "Burgerking.123").Wait();
+            userManager.CreateAsync(tabGidaUser, "Tabgida.123").Wait();
             userManager.AddToRoleAsync(tabGidaUser, "CompanyAdministrator").Wait();
             context.SaveChanges();
         }
@@ -201,24 +201,26 @@ public class DBInitializer
                     {
                         Id = userManager.GetUserIdAsync(new ApplicationUser { UserName = "BurgerKingAdmin" }).Result.ToString(),
                         UserName = "BurgerKingAdmin",
-                        Password = "Burgerking.123",
+                        //Password = "Burgerking.123",
                         Name = "Admin",
                         SurName = "Burger King",
                         Email = "burgerkingadmin@example.com",
                         PhoneNumber = "1234567890",
                         CompanyId = context.Companies.FirstOrDefault(s => s.Name == "TAB Gıda").Id,
-                        StateId = 1
+                        StateId = 1,
                     },
                     BrandId = context.Brands.FirstOrDefault(s => s.Name == "Burger King").Id,
                 };
                 context.BrandUsers.Add(burgerKingAdmin);
+                userManager.CreateAsync(burgerKingAdmin.ApplicationUser, "Burgerking.123").Wait();
+                userManager.AddToRoleAsync(burgerKingAdmin.ApplicationUser, "BrandAdministrator").Wait();
 
                 var arbysAdmin = new BrandUser
                 {
                     ApplicationUser = new ApplicationUser
                     {
                         UserName = "ArbysAdmin",
-                        Password = "Arbys.123",
+                        //Password = "Arbys.123",
                         Name = "Admin",
                         SurName = "arbys",
                         Email = "arbysadmin@example.com",
@@ -231,13 +233,15 @@ public class DBInitializer
                     UserId = userManager.GetUserIdAsync(new ApplicationUser { UserName = "ArbysAdmin" }).Result.ToString()
                 };
                 context.BrandUsers.Add(arbysAdmin);
+                userManager.CreateAsync(arbysAdmin.ApplicationUser, "Arbys.123").Wait();
+                userManager.AddToRoleAsync(arbysAdmin.ApplicationUser, "BrandAdministrator").Wait();
 
                 var popeyesAdmin = new BrandUser
                 {
                     ApplicationUser = new ApplicationUser
                     {
                         UserName = "PopeyesAdmin",
-                        Password = "Popeyes.123",
+                        //Password = "Popeyes.123",
                         Name = "Admin",
                         SurName = "popeyes",
                         Email = "popeyesadmin@example.com",
@@ -249,13 +253,15 @@ public class DBInitializer
                     BrandId = context.Brands.FirstOrDefault(s => s.Name == "Popeyes").Id,
                 };
                 context.BrandUsers.Add(popeyesAdmin);
+                userManager.CreateAsync(popeyesAdmin.ApplicationUser, "Popeyes.123").Wait();
+                userManager.AddToRoleAsync(popeyesAdmin.ApplicationUser, "BrandAdministrator").Wait();
 
                 var ustaDonerciAdmin = new BrandUser
                 {
                     ApplicationUser = new ApplicationUser
                     {
                         UserName = "UstaDonerciAdmin",
-                        Password = "Ustadonerci.123",
+                        //Password = "Ustadonerci.123",
                         Name = "Admin",
                         SurName = "ustadonerci",
                         Email = "ustadonerciadmin@example.com",
@@ -267,13 +273,15 @@ public class DBInitializer
                     BrandId = context.Brands.FirstOrDefault(s => s.Name == "Usta Dönerci").Id
                 };
                 context.BrandUsers.Add(ustaDonerciAdmin);
+                userManager.CreateAsync(ustaDonerciAdmin.ApplicationUser, "Ustadonerci.123").Wait();
+                userManager.AddToRoleAsync(ustaDonerciAdmin.ApplicationUser, "BrandAdministrator").Wait();
 
                 var sbarroAdmin = new BrandUser
                 {
                     ApplicationUser = new ApplicationUser
                     {
                         UserName = "SbarroAdmin",
-                        Password = "Sbarro.123",
+                        //Password = "Sbarro.123",
                         Name = "Admin",
                         SurName = "sbarro",
                         Email = "sbarroadmin@example.com",
@@ -285,13 +293,15 @@ public class DBInitializer
                     BrandId = context.Brands.FirstOrDefault(s => s.Name == "Sbarro").Id
                 };
                 context.BrandUsers.Add(sbarroAdmin);
+                userManager.CreateAsync(sbarroAdmin.ApplicationUser, "Sbarro.123").Wait();
+                userManager.AddToRoleAsync(sbarroAdmin.ApplicationUser, "BrandAdministrator").Wait();
 
                 var ustaPideciAdmin = new BrandUser
                 {
                     ApplicationUser = new ApplicationUser
                     {
                         UserName = "UstaPideciAdmin",
-                        Password = "Ustapideci.123",
+                        //Password = "Ustapideci.123",
                         Name = "Admin",
                         SurName = "ustapideci",
                         Email = "ustapideciadmin@example.com",
@@ -300,16 +310,18 @@ public class DBInitializer
                         StateId = 1,
                         CompanyId = context.Companies.FirstOrDefault(s => s.Name == "TAB Gıda").Id
                     },
-                    BrandId = context.Brands.FirstOrDefault(s => s.Name == "Usta Dönerci").Id
+                    BrandId = context.Brands.FirstOrDefault(s => s.Name == "Usta Pideci").Id
                 };
                 context.BrandUsers.Add(ustaPideciAdmin);
+                userManager.CreateAsync(ustaPideciAdmin.ApplicationUser, "Ustapideci.123").Wait();
+                userManager.AddToRoleAsync(ustaPideciAdmin.ApplicationUser, "BrandAdministrator").Wait();
 
                 var subwayAdmin = new BrandUser
                 {
                     ApplicationUser = new ApplicationUser
                     {
                         UserName = "SubwayAdmin",
-                        Password = "Subway.123",
+                        //Password = "Subway.123",
                         Name = "Admin",
                         SurName = "subway",
                         Email = "subwayadmin@example.com",
@@ -321,6 +333,8 @@ public class DBInitializer
                     BrandId = context.Brands.FirstOrDefault(s => s.Name == "Subway").Id
                 };
                 context.BrandUsers.Add(subwayAdmin);
+                userManager.CreateAsync(subwayAdmin.ApplicationUser, "Subway.123").Wait();
+                userManager.AddToRoleAsync(subwayAdmin.ApplicationUser, "BrandAdministrator").Wait();
             }
         }
         context.SaveChanges();
