@@ -115,7 +115,7 @@ namespace QRMenuAPI.Controllers
 
         // DELETE: api/Foods/5
         //Restoran Yöneticisinin yemekleri açıp(active) kapatmasını(passive) sağlar.
-        [HttpDelete("{id}")]
+        [HttpDelete("Food/{id}")]
         [Authorize(Roles = "RestaurantAdministrator")]
         public async Task<IActionResult> ChangeFoodState(int id)
         {

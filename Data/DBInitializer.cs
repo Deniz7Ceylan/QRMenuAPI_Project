@@ -212,8 +212,8 @@ public class DBInitializer
                     BrandId = context.Brands.FirstOrDefault(s => s.Name == "Burger King").Id,
                 };
                 context.BrandUsers.Add(burgerKingAdmin);
-                userManager.CreateAsync(burgerKingAdmin.ApplicationUser, "Burgerking.123").Wait();
-                userManager.AddToRoleAsync(burgerKingAdmin.ApplicationUser, "BrandAdministrator").Wait();
+                //userManager.CreateAsync(burgerKingAdmin.ApplicationUser, "Burgerking.123").Wait();
+                //userManager.AddToRoleAsync(burgerKingAdmin.ApplicationUser, "BrandAdministrator").Wait();
 
                 var arbysAdmin = new BrandUser
                 {
@@ -233,8 +233,8 @@ public class DBInitializer
                     UserId = userManager.GetUserIdAsync(new ApplicationUser { UserName = "ArbysAdmin" }).Result.ToString()
                 };
                 context.BrandUsers.Add(arbysAdmin);
-                userManager.CreateAsync(arbysAdmin.ApplicationUser, "Arbys.123").Wait();
-                userManager.AddToRoleAsync(arbysAdmin.ApplicationUser, "BrandAdministrator").Wait();
+                //userManager.CreateAsync(arbysAdmin.ApplicationUser, "Arbys.123").Wait();
+                //userManager.AddToRoleAsync(arbysAdmin.ApplicationUser, "BrandAdministrator").Wait();
 
                 var popeyesAdmin = new BrandUser
                 {
@@ -253,8 +253,8 @@ public class DBInitializer
                     BrandId = context.Brands.FirstOrDefault(s => s.Name == "Popeyes").Id,
                 };
                 context.BrandUsers.Add(popeyesAdmin);
-                userManager.CreateAsync(popeyesAdmin.ApplicationUser, "Popeyes.123").Wait();
-                userManager.AddToRoleAsync(popeyesAdmin.ApplicationUser, "BrandAdministrator").Wait();
+                //userManager.CreateAsync(popeyesAdmin.ApplicationUser, "Popeyes.123").Wait();
+                //userManager.AddToRoleAsync(popeyesAdmin.ApplicationUser, "BrandAdministrator").Wait();
 
                 var ustaDonerciAdmin = new BrandUser
                 {
@@ -273,8 +273,8 @@ public class DBInitializer
                     BrandId = context.Brands.FirstOrDefault(s => s.Name == "Usta Dönerci").Id
                 };
                 context.BrandUsers.Add(ustaDonerciAdmin);
-                userManager.CreateAsync(ustaDonerciAdmin.ApplicationUser, "Ustadonerci.123").Wait();
-                userManager.AddToRoleAsync(ustaDonerciAdmin.ApplicationUser, "BrandAdministrator").Wait();
+                //userManager.CreateAsync(ustaDonerciAdmin.ApplicationUser, "Ustadonerci.123").Wait();
+                //userManager.AddToRoleAsync(ustaDonerciAdmin.ApplicationUser, "BrandAdministrator").Wait();
 
                 var sbarroAdmin = new BrandUser
                 {
@@ -293,8 +293,8 @@ public class DBInitializer
                     BrandId = context.Brands.FirstOrDefault(s => s.Name == "Sbarro").Id
                 };
                 context.BrandUsers.Add(sbarroAdmin);
-                userManager.CreateAsync(sbarroAdmin.ApplicationUser, "Sbarro.123").Wait();
-                userManager.AddToRoleAsync(sbarroAdmin.ApplicationUser, "BrandAdministrator").Wait();
+                //userManager.CreateAsync(sbarroAdmin.ApplicationUser, "Sbarro.123").Wait();
+                //userManager.AddToRoleAsync(sbarroAdmin.ApplicationUser, "BrandAdministrator").Wait();
 
                 var ustaPideciAdmin = new BrandUser
                 {
@@ -313,8 +313,8 @@ public class DBInitializer
                     BrandId = context.Brands.FirstOrDefault(s => s.Name == "Usta Pideci").Id
                 };
                 context.BrandUsers.Add(ustaPideciAdmin);
-                userManager.CreateAsync(ustaPideciAdmin.ApplicationUser, "Ustapideci.123").Wait();
-                userManager.AddToRoleAsync(ustaPideciAdmin.ApplicationUser, "BrandAdministrator").Wait();
+                //userManager.CreateAsync(ustaPideciAdmin.ApplicationUser, "Ustapideci.123").Wait();
+                //userManager.AddToRoleAsync(ustaPideciAdmin.ApplicationUser, "BrandAdministrator").Wait();
 
                 var subwayAdmin = new BrandUser
                 {
@@ -332,9 +332,9 @@ public class DBInitializer
                     },
                     BrandId = context.Brands.FirstOrDefault(s => s.Name == "Subway").Id
                 };
-                context.BrandUsers.Add(subwayAdmin);
-                userManager.CreateAsync(subwayAdmin.ApplicationUser, "Subway.123").Wait();
-                userManager.AddToRoleAsync(subwayAdmin.ApplicationUser, "BrandAdministrator").Wait();
+                //context.BrandUsers.Add(subwayAdmin);
+                //userManager.CreateAsync(subwayAdmin.ApplicationUser, "Subway.123").Wait();
+                //userManager.AddToRoleAsync(subwayAdmin.ApplicationUser, "BrandAdministrator").Wait();
             }
         }
         context.SaveChanges();

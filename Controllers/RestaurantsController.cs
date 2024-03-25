@@ -136,7 +136,7 @@ namespace QRMenuAPI.Controllers
         }
 
         // DELETE: api/Restaurants/5
-        [HttpDelete("{id}")]
+        [HttpDelete("Restaurant/{id}")]
         [Authorize(Roles = "BrandAdministrator")]
         public async Task<IActionResult> ChangeRestaurantState(int id)
         {
